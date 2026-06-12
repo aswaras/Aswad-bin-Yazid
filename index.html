@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth scroll-pt-20">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok Pengajian Aswad Bin Yazid Bin Qais An-Nakhai 2</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Animation */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 font-sans text-slate-800">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo & Brand -->
+                <a href="#beranda" class="flex items-center gap-3 cursor-pointer group">
+                    <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg transition-transform group-hover:scale-105">
+                        A2
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg text-emerald-900 leading-tight">Pengajian Aswad</span>
+                        <span class="text-xs text-emerald-600 font-medium tracking-wide">Bin Yazid Bin Qais An-Nakhai 2</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#beranda" class="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Beranda</a>
+                    <a href="#profil" class="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Kegiatan</a>
+                    <a href="#pengurus" class="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Pengurus</a>
+                    <a href="#jadwal" class="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Jadwal</a>
+                    <a href="#lokasi" class="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Lokasi</a>
+                    <a href="#dokumentasi" class="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Galeri</a>
+                    <a href="#materi" class="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Materi</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-emerald-600 focus:outline-none p-2">
+                        <i data-lucide="menu" id="menu-icon" class="w-7 h-7"></i>
+                        <i data-lucide="x" id="close-icon" class="w-7 h-7 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu-panel" class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#beranda" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg font-medium">Beranda</a>
+                <a href="#profil" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg font-medium">Kegiatan</a>
+                <a href="#pengurus" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg font-medium">Pengurus</a>
+                <a href="#jadwal" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg font-medium">Jadwal Rutin</a>
+                <a href="#lokasi" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg font-medium">Lokasi</a>
+                <a href="#dokumentasi" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg font-medium">Galeri</a>
+                <a href="#materi" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg font-medium">Materi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="pt-32 pb-20 lg:pt-40 lg:pb-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-gradient-to-b from-emerald-50 to-slate-50">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+            <div class="absolute top-20 -left-20 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 font-semibold text-sm mb-6 border border-emerald-200">
+                <i data-lucide="users" class="w-4 h-4"></i>
+                <span>Kelompok Kajian Tertutup & Rutin</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                Menuntut Ilmu Syar'i <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">
+                    Membangun Peradaban Hati
+                </span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Selamat datang di portal informasi <strong>Kelompok Pengajian Aswad Bin Yazid Bin Qais An-Nakhai 2</strong>. Kami adalah majelis tarbiyah dengan keanggotaan tetap yang berfokus pada tahsin, tadabbur, dan ukhuwah islamiyah.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#jadwal" class="w-full sm:w-auto px-8 py-4 bg-emerald-600 text-white rounded-xl font-bold hover:bg-emerald-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                    Jadwal & Lokasi
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </a>
+                <a href="#pengurus" class="w-full sm:w-auto px-8 py-4 bg-white text-emerald-700 rounded-xl font-bold hover:bg-emerald-50 transition-all shadow-md border border-emerald-100 flex items-center justify-center gap-2">
+                    Profil Pengurus
+                    <i data-lucide="user-check" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFIL & KEGIATAN SECTION -->
+    <section id="profil" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div class="absolute inset-0 bg-emerald-100 rounded-3xl transform -rotate-3 scale-105"></div>
+                    <div class="relative bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600">
+                                <i data-lucide="book-open" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">Fokus Majelis</h3>
+                                <p class="text-emerald-600 font-medium">Pembinaan Rutin</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed mb-6 text-justify">
+                            Majelis ini mengambil nama dari tokoh Tabi'in mulia, <strong>Aswad bin Yazid bin Qais An-Nakhai</strong>. Kami berkomitmen untuk menyelenggarakan majelis ilmu yang terstruktur dan berkesinambungan bagi peserta tetap.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            Sistem kajian didesain interaktif dan kekeluargaan, memastikan setiap jamaah tidak hanya mendapatkan teori agama, namun juga bimbingan amaliyah dan ikatan persaudaraan yang kuat.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                        Rangkaian Kegiatan Rutin Jamaah
+                    </h2>
+                    <ul class="space-y-6">
+                        <!-- Tahsin -->
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                                    <i data-lucide="book" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800 mb-1">Tahsin Al-Qur'an</h4>
+                                <p class="text-slate-600">Memperbaiki dan menyempurnakan bacaan Al-Qur'an jamaah sesuai kaidah tajwid yang benar.</p>
+                            </div>
+                        </li>
+                        <!-- Tadabbur -->
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                                    <i data-lucide="search" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800 mb-1">Tadabbur Isi Al-Qur'an</h4>
+                                <p class="text-slate-600">Menyelami, merenungkan, dan mengambil ibrah dari makna ayat-ayat suci Al-Qur'an.</p>
+                            </div>
+                        </li>
+                        <!-- Materi -->
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800 mb-1">Materi Pengajian</h4>
+                                <p class="text-slate-600">Penyampaian kajian tematik Islam dan kitab untuk meningkatkan tsaqafah dan keimanan.</p>
+                            </div>
+                        </li>
+                        <!-- Bincang -->
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                                    <i data-lucide="coffee" class="w-5 h-5"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800 mb-1">Bincang-bincang</h4>
+                                <p class="text-slate-600">Sesi ramah tamah, diskusi ringan, dan tanya jawab untuk mempererat ukhuwah peserta.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUROBBI & PENGURUS SECTION -->
+    <section id="pengurus" class="py-20 bg-emerald-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Murobbi & Susunan Pengurus</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Kajian ini dibina secara langsung oleh Murobbi dan dikelola secara mandiri oleh pengurus kelompok.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Murobbi -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border-2 border-emerald-500 text-center hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">PEMBINA</div>
+                    <div class="w-24 h-24 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="book-open-check" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Ustadz Muchtadyn Abdul Aziz</h3>
+                    <p class="text-emerald-600 font-bold mb-4 tracking-wide">MUROBBI</p>
+                    <div class="w-12 h-1 bg-emerald-200 mx-auto mb-4"></div>
+                    <p class="text-slate-600 text-sm">Bertindak sebagai guru dan pembimbing utama dalam kegiatan tahsin, tadabbur, dan materi pengajian rutin kelompok.</p>
+                </div>
+
+                <!-- Naqib -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-emerald-100 text-center hover:shadow-xl hover:border-emerald-200 transition-all duration-300 group mt-0 lg:mt-6">
+                    <div class="w-24 h-24 mx-auto bg-slate-100 text-slate-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="user-check" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Andi Ilham</h3>
+                    <p class="text-teal-600 font-medium mb-4">NAQIB (KETUA KELOMPOK)</p>
+                    <div class="w-12 h-1 bg-slate-200 mx-auto mb-4"></div>
+                    <p class="text-slate-600 text-sm">Mengkoordinir kehadiran peserta, mengatur berjalannya kegiatan mingguan, dan menjaga komunikasi antar jamaah.</p>
+                </div>
+
+                <!-- Bendahara -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-emerald-100 text-center hover:shadow-xl hover:border-emerald-200 transition-all duration-300 group mt-0 lg:mt-6">
+                    <div class="w-24 h-24 mx-auto bg-slate-100 text-slate-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="wallet" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Muhammad Jamil</h3>
+                    <p class="text-teal-600 font-medium mb-4">BENDAHARA</p>
+                    <div class="w-12 h-1 bg-slate-200 mx-auto mb-4"></div>
+                    <p class="text-slate-600 text-sm">Bertanggung jawab atas pengelolaan infaq rutin, kas operasional majelis, dan program sosial kelompok.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JADWAL RUTIN SECTION -->
+    <section id="jadwal" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Jadwal Pengajian Rutin</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Kajian kelompok kami dilaksanakan secara konsisten di waktu dan tempat yang telah disepakati bersama.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden flex flex-col md:flex-row relative">
+                    <div class="md:w-1/3 bg-emerald-600 p-8 flex flex-col justify-center items-center text-center text-white relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-20"></div>
+                        <i data-lucide="calendar-clock" class="w-16 h-16 mb-4 relative z-10"></i>
+                        <h3 class="text-2xl font-bold mb-1 relative z-10">SETIAP JUMAT</h3>
+                        <p class="text-emerald-100 text-lg font-medium relative z-10">Pukul 20.00 WITA</p>
+                    </div>
+                    
+                    <div class="md:w-2/3 p-8 flex flex-col justify-center bg-white">
+                        <div class="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full uppercase tracking-wider w-max mb-4">
+                            Halaqah Pekanan
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6">Pertemuan Kelompok Aswad 2</h3>
+                        
+                        <div class="space-y-5">
+                            <div class="flex items-start">
+                                <i data-lucide="user" class="w-6 h-6 mr-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-lg">Ustadz Muchtadyn Abdul Aziz</p>
+                                    <p class="text-sm text-slate-500">Murobbi / Pemateri Utama</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="map-pin" class="w-6 h-6 mr-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-lg">Perumahan Nusa Indah</p>
+                                    <p class="text-sm text-slate-500">Lokasi tetap pertemuan jamaah</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 mr-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-lg">Agenda Disiplin Waktu</p>
+                                    <p class="text-sm text-slate-500">Dimohon seluruh peserta tetap hadir tepat waktu pada pukul 20.00 WITA.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEMPAT / LOKASI SECTION -->
+    <section id="lokasi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 font-semibold text-sm mb-6 border border-emerald-200">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        <span>Titik Kumpul Jamaah</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Lokasi Pertemuan Rutin</h2>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Demi kenyamanan dan kekhusyukan jamaah, seluruh kegiatan tahsin, tadabbur, dan pemberian materi dipusatkan pada satu lokasi tetap.
+                    </p>
+                    
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-emerald-100 shadow-sm relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-24 h-24 bg-emerald-100 rounded-bl-full opacity-50 -z-0"></div>
+                        <div class="flex items-center gap-4 mb-4 relative z-10">
+                            <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-emerald-600 border border-slate-100">
+                                <i data-lucide="home" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800">Perumahan Nusa Indah</h4>
+                                <span class="text-xs font-bold text-white bg-emerald-600 px-2 py-1 rounded mt-1 inline-block">LOKASI TETAP</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed relative z-10">
+                            Fasilitas kajian telah disiapkan secara tertutup untuk menjaga fokus jamaah tetap yang hadir setiap Jumat malam. Silakan hubungi Naqib (Ketua) jika butuh panduan rute.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Peta / Ilustrasi Lokasi -->
+                <div class="relative h-[350px] lg:h-[450px] rounded-3xl overflow-hidden bg-slate-100 shadow-lg border-4 border-white flex items-center justify-center group">
+                    <!-- Placeholder visual untuk Map -->
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                    <div class="relative z-10 flex flex-col items-center justify-center text-slate-500 p-8 text-center bg-white/90 backdrop-blur-sm rounded-2xl border border-slate-200 m-6 shadow-sm group-hover:scale-105 transition-transform">
+                        <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-4 shadow-inner">
+                            <i data-lucide="map" class="w-8 h-8"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xl mb-1">Perumahan Nusa Indah</p>
+                        <p class="text-sm">Area ini dapat diganti dengan fitur <strong>Embed Google Maps</strong> Perumahan Nusa Indah agar lebih interaktif.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI / DOKUMENTASI SECTION -->
+    <section id="dokumentasi" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/50 text-emerald-300 font-semibold text-sm mb-4 border border-emerald-700/50">
+                    <i data-lucide="camera" class="w-4 h-4"></i>
+                    <span>Potret Kebersamaan</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Galeri Dokumentasi</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+                    Kumpulan memori dan dokumentasi kegiatan rutin jamaah Aswad Bin Yazid Bin Qais An-Nakhai 2.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Foto 1 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-slate-800 cursor-pointer aspect-video border border-slate-700/50">
+                    <img src="https://placehold.co/800x600/059669/ffffff?text=Suasana+Tahsin" alt="Sesi Tahsin" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h4 class="text-white font-bold text-lg">Sesi Tahsin Al-Qur'an</h4>
+                            <p class="text-emerald-300 text-sm mt-1">Bimbingan tajwid bersama Murobbi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-slate-800 cursor-pointer aspect-video border border-slate-700/50">
+                    <img src="https://placehold.co/800x600/0f766e/ffffff?text=Kajian+Materi" alt="Kajian Materi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h4 class="text-white font-bold text-lg">Materi Pengajian</h4>
+                            <p class="text-teal-300 text-sm mt-1">Penyampaian materi tematik</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-slate-800 cursor-pointer aspect-video border border-slate-700/50">
+                    <img src="https://placehold.co/800x600/0f172a/ffffff?text=Tadabbur" alt="Tadabbur" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h4 class="text-white font-bold text-lg">Tadabbur Al-Qur'an</h4>
+                            <p class="text-slate-300 text-sm mt-1">Menyelami makna ayat-ayat suci</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-slate-800 cursor-pointer aspect-video border border-slate-700/50">
+                    <img src="https://placehold.co/800x600/334155/ffffff?text=Bincang+Santai" alt="Bincang-bincang" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h4 class="text-white font-bold text-lg">Sesi Bincang-bincang</h4>
+                            <p class="text-slate-300 text-sm mt-1">Ramah tamah dan diskusi hangat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-slate-800 cursor-pointer aspect-video border border-slate-700/50">
+                    <img src="https://placehold.co/800x600/047857/ffffff?text=Lokasi" alt="Fasilitas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h4 class="text-white font-bold text-lg">Fasilitas Majelis</h4>
+                            <p class="text-emerald-300 text-sm mt-1">Kenyamanan lokasi di Perumahan Nusa Indah</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-lg bg-slate-800 cursor-pointer aspect-video border border-slate-700/50">
+                    <img src="https://placehold.co/800x600/1e293b/ffffff?text=Jamaah" alt="Jamaah" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h4 class="text-white font-bold text-lg">Kekeluargaan Jamaah</h4>
+                            <p class="text-slate-300 text-sm mt-1">Ukhuwah islamiyah antar anggota tetap</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <button class="px-6 py-3 bg-slate-800 border border-slate-700 text-white rounded-full font-medium hover:bg-emerald-600 hover:border-emerald-600 transition-colors shadow-lg flex items-center gap-2 mx-auto group">
+                    <i data-lucide="images" class="w-5 h-5 text-emerald-400 group-hover:text-white transition-colors"></i>
+                    Lihat Semua Dokumentasi
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MATERI & ARSIP SECTION -->
+    <section id="materi" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Arsip Dokumen & Materi</h2>
+                    <p class="text-lg text-slate-600">Catatan dan ringkasan materi bagi jamaah yang berhalangan hadir.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100">
+                <div class="space-y-4">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 bg-slate-50 rounded-2xl hover:shadow-md transition-shadow border border-slate-100 gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 flex-shrink-0">
+                                <i data-lucide="file-text" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-800">Catatan Tadabbur Jumat Lalu</h4>
+                                <p class="text-sm text-slate-500">PDF • Internal Kelompok</p>
+                            </div>
+                        </div>
+                        <button class="w-full sm:w-auto px-6 py-2 bg-white border border-slate-200 text-slate-700 rounded-full font-medium hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-colors text-sm">
+                            Unduh
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                            A2
+                        </div>
+                        <span class="font-bold text-lg text-white">Pengajian Aswad 2</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Kelompok Pengajian Aswad Bin Yazid Bin Qais An-Nakhai 2. Menebar sunnah, menjalin ukhuwah islamiyah.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-wider">Navigasi Internal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#beranda" class="hover:text-emerald-400 transition-colors">Beranda</a></li>
+                        <li><a href="#profil" class="hover:text-emerald-400 transition-colors">Kegiatan Rutin</a></li>
+                        <li><a href="#pengurus" class="hover:text-emerald-400 transition-colors">Murobbi & Pengurus</a></li>
+                        <li><a href="#jadwal" class="hover:text-emerald-400 transition-colors">Jadwal & Lokasi</a></li>
+                        <li><a href="#dokumentasi" class="hover:text-emerald-400 transition-colors">Galeri Dokumentasi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-wider">Kontak Pengurus</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-[18px] h-[18px] text-emerald-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Perumahan Nusa Indah</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="user" class="w-[18px] h-[18px] text-emerald-500 mt-0.5 flex-shrink-0"></i>
+                            <span>Andi Ilham (Naqib)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 text-center text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Kelompok Pengajian Aswad Bin Yazid Bin Qais An-Nakhai 2.</p>
+                <p>Khusus Anggota Tetap.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inisialisasi ikon Lucide
+        lucide.createIcons();
+
+        // Logika Navbar Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuPanel.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Menutup menu mobile saat link diklik
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuPanel.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
